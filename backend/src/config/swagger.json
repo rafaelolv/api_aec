@@ -1,0 +1,53 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Calculadora",
+      "description": "API Calculadora com swagger",
+      "version": "1.0"
+    },
+    "host": "localhost:8001",
+    "basePath": "/",
+    "schemes": [
+      "http"
+    ],
+    "paths": {
+      "/cidade/{codigo}": {
+        "get": {
+          "description": "Digite o código da cidade.",
+          "operationId": "BUSCA",
+          "parameters": [
+            {
+              "name": "codigo",
+              "in": "path",
+              "description": "Código da cidade",
+              "required": true,
+              "default": "999",
+              "enum": [
+                "10"
+              ]
+            }
+          ],
+          "responses": {}
+        }
+      },
+      "/aero/{codigo}": {
+        "get": {
+          "description": "Digite o código do aeroporto.",
+          "operationId": "BUSCA",
+          "parameters": [
+            {
+              "name": "codigo",
+              "in": "path",
+              "description": "Código do aeroporto",
+              "required": true,
+              "default": "SBRG",
+              "enum": [
+                "10"
+              ]
+            }
+          ],
+          "responses": {}
+        }
+      }
+    }   
+}
